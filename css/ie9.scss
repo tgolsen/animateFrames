@@ -1,0 +1,7 @@
+/** IE9 only */
+
+// IE9 supports both opacity and -ms-filter. Sane people only use ms filters for opacity compatibilty, so in IE9 ignore those filters
+* {
+    filter: none;
+    -ms-filter: none;
+}

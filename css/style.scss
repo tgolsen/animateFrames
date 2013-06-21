@@ -1,0 +1,17 @@
+/** Mixins */
+// This mixin requires _ie9.scss, to handle the one version that stacks the MS filter and CSS opacity
+@mixin opacity($op) {
+    opacity: $op;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100*$op)";
+    filter: alpha(opacity=100*$op);
+    zoom: 1;
+}
+@mixin transition ($which, $duration) {
+    -webkit-transition: $which $duration;
+    -moz-transition: $which $duration;
+    -o-transition: $which $duration;
+    transition: $which $duration;
+}
+
+/** Imports */
+@import "animateFrames";

@@ -1,0 +1,28 @@
+ul.animate, ul.animate-done {
+    list-style: none;
+    margin: 0;
+    position: relative;
+
+    li {
+        margin: 0;
+    }
+
+    &.animate-modern {
+        li {
+            position: absolute;
+            @include opacity(0);
+            &.active-slide {
+                @include opacity(1);
+            }
+        }
+    }
+    &.animate-legacy {
+        li {
+            position: relative;
+            display:none;
+            &.active-slide {
+                display:block;
+            }
+        }
+    }
+}
